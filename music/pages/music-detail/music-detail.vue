@@ -91,6 +91,7 @@
 				</block>
 			</scroll-view>
 		</view>
+		
 	</view>
 </template>
 

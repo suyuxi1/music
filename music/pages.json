@@ -6,7 +6,7 @@
 				"navigationBarTitleText": "uni-app"
 			}
 		}, {
-			"path": "pages/details/details",
+			"path": "pages/music-detail/music-detail",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
@@ -30,7 +30,7 @@
 			{
 				"iconPath": "./static/tabbar/fenlei.png",
 				"selectedIconPath": "static/tabbar/fenlei-selected.png",
-				"pagePath": "pages/details/details",
+				// "pagePath": "pages/music-detail/music-detail",
 				"text": "分类"
 			}, {
 				"iconPath": "./static/tabbar/love.png",
