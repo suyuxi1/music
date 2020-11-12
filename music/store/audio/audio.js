@@ -21,7 +21,13 @@ export default {
 			let curIndex = state.currentPlayIndex;
 			let singer = musics[curIndex].singer;
 			return singer.name
+		},
+		singerSynopsis(state) {
+			let curIndex = state.currentPlayIndex;
+			let singer = musics[curIndex].singer;
+			return singer.synopsis
 		}
+
 	},
 	mutations: {
 		// 监听

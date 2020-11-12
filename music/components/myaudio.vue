@@ -18,7 +18,7 @@
 				/>
 			</view>
 			<!-- 播放时刻 -->
-			<view>{{ durationTime | formatTime }}</view>
+			<view>{{ currentTime | formatTime }}</view>
 		</view>
 		<view class="flex align-center justify-between mx-2" style="height: 95rpx;">
 			<!-- 音频按钮相关 -->
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+//四个辅助函数
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 import unit from '../common/unit.js';
 export default {

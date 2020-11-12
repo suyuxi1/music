@@ -5,6 +5,13 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		}, {
+			"path": "pages/details/details",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
 	"globalStyle": {
@@ -23,7 +30,7 @@
 			{
 				"iconPath": "./static/tabbar/fenlei.png",
 				"selectedIconPath": "static/tabbar/fenlei-selected.png",
-				// "pagePath": "pages/index/index",
+				"pagePath": "pages/details/details",
 				"text": "分类"
 			}, {
 				"iconPath": "./static/tabbar/love.png",

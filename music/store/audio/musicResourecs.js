@@ -11,7 +11,8 @@ export default {
 		{
 			id: 2002,
 			name: "不再犹豫",
-			src: "/static/mp3/不再犹豫.mp3",
+			// src: "/static/mp3/不再犹豫.mp3",
+			src: "http://music.163.com/song/media/outer/url?id=347597.mp3",
 			singer: {
 				name: "Beyond",
 				synopsis: "2222222222"
@@ -29,7 +30,7 @@ export default {
 		{
 			id: 2004,
 			name: "你是人间四月天",
-			src: "/static/mp3/你是人间四月天.mp3",
+			src: "http://music.163.com/song/media/outer/url?id=1344897943.mp3",
 			singer: {
 				name: "邵帅",
 				synopsis: "444444444"
