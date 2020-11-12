@@ -1,5 +1,6 @@
 <template>
-	<view>
+	<!-- 根据nightStatus的值切换白天和黑夜 -->
+	<view style="height: 100vh;" :class="nightStatus ? 'nightTheme' : ''">
 		<!--歌曲信息-->
 		<view class="d-inline-block w-100 text-center py-4">
 			<view>
@@ -23,7 +24,7 @@
 			<view>{{ durationTime | formatTime }}</view>
 			<!-- 进度条部分 -->
 			<view style="width: 500rpx;">
-				<slider block-size="16" activeColor="#007BFF" backgroundColor="#17A2B8" :max="durationTime" :value="currentTime" @change="sliderToPlay" @changing="sliderToPlay" />
+				<slider block-size="16" activeColor="#e48267" backgroundColor="#eef2f3" :max="durationTime" :value="currentTime" @change="sliderToPlay" @changing="sliderToPlay" />
 			</view>
 			<!-- 播放时刻 -->
 			<view>{{ currentTime | formatTime }}</view>
@@ -46,8 +47,8 @@
 					<my-icon iconId="icon-aixinfengxian" iconSize="60"></my-icon>
 					<text class="pt-1">收藏</text>
 				</view>
-				<view class="flex flex-column align-center">
-					<my-icon iconId="icon-yejianmoshi" iconSize="60"></my-icon>
+				<view class="flex flex-column align-center" @tap="chageStatus('nightStatus')">
+					<my-icon :iconId="!nightStatus ? 'icon-yejianmoshi' : 'icon-yueliang'" iconSize="60"></my-icon>
 					<text class="pt-1">夜间模式</text>
 				</view>
 			</view>
@@ -91,7 +92,6 @@
 				</block>
 			</scroll-view>
 		</view>
-		
 	</view>
 </template>
 
@@ -101,7 +101,11 @@ import unit from '../../common/unit.js';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 export default {
 	data() {
-		return {};
+		return {
+			listStatus: false, //
+			collectStatus: false,
+			nightStatus: false
+		};
 	},
 	filters: {
 		formatTime(num) {
@@ -117,7 +121,10 @@ export default {
 		...mapGetters(['audioName', 'singerName', 'singerSynopsis'])
 	},
 	methods: {
-		...mapMutations(['sliderToPlay'])
+		...mapMutations(['sliderToPlay']),
+		chageStatus(statusType) {
+			this[statusType] = !this[statusType];
+		}
 	}
 };
 </script>
