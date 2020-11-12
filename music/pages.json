@@ -8,7 +8,7 @@
 		}, {
 			"path": "pages/music-detail/music-detail",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "音乐详情",
 				"enablePullDownRefresh": false
 			}
 
