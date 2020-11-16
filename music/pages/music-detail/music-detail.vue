@@ -14,7 +14,13 @@
 
 		<!-- 歌曲图片 -->
 		<view class="flex align-center justify-center" style="height:420rpx;">
-			<image src="../../static/cover.jpg" lazy-load mode="widthFix" style="border-radius: 35rpx;box-shadow: 0 2rpx 6rpx 0;height:320rpx; width: 80%;" alt="altText" />
+			<image
+				:src="audioCover || '../../static/cover.jpg'"
+				lazy-load
+				mode="widthFix"
+				style="border-radius: 35rpx;box-shadow: 0 2rpx 6rpx 0; height:300rpx; width: 80%;"
+				alt="altText"
+			/>
 		</view>
 
 		<!-- 进度部分 -->
@@ -141,7 +147,7 @@ export default {
 			audioList: ({ audio }) => audio.audioList,
 			playStatus: ({ audio }) => audio.playStatus
 		}),
-		...mapGetters(['audioName', 'singerName', 'singerSynopsis'])
+		...mapGetters(['audioName', 'singerName', 'singerSynopsis', 'audioCover'])
 	}
 };
 </script>

@@ -12,6 +12,13 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/sort/sort",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
 	"globalStyle": {
@@ -30,7 +37,7 @@
 			{
 				"iconPath": "./static/tabbar/fenlei.png",
 				"selectedIconPath": "static/tabbar/fenlei-selected.png",
-				// "pagePath": "pages/music-detail/music-detail",
+				"pagePath": "pages/sort/sort",
 				"text": "分类"
 			}, {
 				"iconPath": "./static/tabbar/love.png",
